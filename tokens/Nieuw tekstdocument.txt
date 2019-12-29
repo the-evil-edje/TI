@@ -1,0 +1,3 @@
+k6gko4szxrctuyuk9i8hzbxw73s9t6
+
+curl -H 'Client-ID: 4apetz69vm7oun8rtshmpi5j4p61ci'\-X GET 'https://api.twitch.tv/helix/streams?game_id=33214'
