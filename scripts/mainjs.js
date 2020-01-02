@@ -77,7 +77,7 @@ function getCryptoNews() {
 	   }
 	});
 }
-
+//lets goo
 function getTest() {
 	$.ajax({
 	   type: "GET",
