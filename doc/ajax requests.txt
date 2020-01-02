@@ -1,4 +1,17 @@
-https://api.twitch.tv/helix/users?login=loserfruit
-GET https://api.twitch.tv/helix/users/follows?from_id=41245072
-'https://api.twitch.tv/helix/users?id=41245072'
-https://api.twitch.tv/helix/streams?user_login=Dappur
+ID:
+loserfruit: 41245072
+
+https://api.twitch.tv/helix/users?login=
+
+https://api.twitch.tv/helix/users?id=
+https://api.twitch.tv/helix/streams?user_login=
+
+https://api.twitch.tv/helix/users/follows?from_id=
+
+https://api.twitch.tv/helix/games?name=
+https://api.twitch.tv/helix/games/top
+
+https://api.twitch.tv/helix/clips?broadcaster_id=
+https://api.twitch.tv/helix/clips?game_id=
+
+https://api.twitch.tv/helix/bits/leaderboard?user_id=
