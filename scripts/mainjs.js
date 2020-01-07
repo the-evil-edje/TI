@@ -16,6 +16,8 @@ $(document).ready(function(){
     getTest();
 });
 
+
+
 function getUserId(user)
 {
   $.ajax({
@@ -43,10 +45,14 @@ function getUserId(user)
 
       $("#fiets").attr("src","https://player.twitch.tv/?channel=" + user);
 
-      $("#followerInfo").html(html);
+
+      $("#test1").empty().html(user);
+
+      $(".followerInfo").html(html);
 			 })
 	   }
 	});
+  //getCryptoNews();
 }
 function getCryptoNews() {
 	$.ajax({
@@ -70,9 +76,10 @@ function getCryptoNews() {
 			  console.log(value.login);
         console.log(value.description);
 
-        html = "<img src=\"" + value.profile_image_url + "\" />";
+        //html = "<img src=\"" + value.profile_image_url + "\" />";
+        html = "<img class=\"followersImage\" src=\"" + value.profile_image_url + "\"  draggable=\"true\" ondragstart=\"drag(event)\" id=\"drag1\" width=\"99%\" height=\"99%\"/>";
 
-      $("#followerInfo").html(html);
+      $(".followerInfo").html(html);
 			 })
 	   }
 	});
@@ -121,3 +128,24 @@ input.addEventListener("keyup", function(event) {
     document.getElementById("test").click();
   }
 });
+
+function allowDrop(ev) {
+  ev.preventDefault();
+}
+
+function drag(ev) {
+  ev.dataTransfer.setData("text", ev.target.id);
+}
+
+function drop(ev) {
+  ev.preventDefault();
+  var data = ev.dataTransfer.getData("text");
+
+
+  console.log("data = "  + data);
+  ev.target.appendChild(document.getElementById(data));
+}
+
+$( function() {
+  $( "#tabs" ).tabs();
+} );

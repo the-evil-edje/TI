@@ -8,6 +8,22 @@
     <title>tutorial</title>
   </head>
   <body>
+    <h2>Drag and Drop</h2>
+    <p>Drag the image back and forth between the two div elements.</p>
+
+    <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+      <!-- <img src="img/download.png" draggable="true" ondragstart="drag(event)" id="drag1" width="99%" height="99%"> -->
+    </div>
+
+    <div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+    <div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+    <div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+    <div id="div2" class="followerInfo" ondrop="drop(event)" ondragover="allowDrop(event)">
+
+    </div>
+
+
+
     <div class="container">
       <div id="header" class="text-center">
         <h1>New Twitch API</h1>
@@ -36,6 +52,13 @@
       </div>
       <iframe id="fiets" src="https://player.twitch.tv/?channel=myth" width="" height="">
 
+      </iframe>
+      <iframe frameborder="0"
+        scrolling="no"
+        id="chat_embed"
+        src="https://www.twitch.tv/embed/myth/chat"
+        height="500"
+        width="350">
       </iframe>
     </div>
 
