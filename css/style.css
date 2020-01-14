@@ -1,3 +1,17 @@
+body {
+  background-color: #181818;
+
+}
+
+body, #tabs {
+  color: #fff;
+}
+
+#tabs {
+  background-color: #181818;
+  color: white;
+}
+
 #div1, #div2 {
   float: left;
   width: 100px;
@@ -10,4 +24,9 @@
 .followersImage
 {
   width: 100px;
+}
+
+h1 {
+  font-size: 24px;
+  color: #fff;
 }

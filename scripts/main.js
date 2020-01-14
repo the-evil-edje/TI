@@ -64,8 +64,27 @@ function getUserInformation(userId) {
       $.each(advancedUserInfo.data, function(index, value){
 
         console.log("jaja: " + value.login);
-        $("#displayName1").html("<h1>Display Name:</h1>" + value.login);
+        $("#displayName1").html("<h1>Display Name: " + value.login + "</h1>");
       })
+    }
+	})
+}
+
+function getUserSubscriptions(userId) {
+	$.ajax({
+	   type: "GET",
+	   dataType: "json",
+	   url: "https://api.twitch.tv/helix/users/subscriptions?user_id" + userId,
+     headers: {
+       'Authorization': 'k6gko4szxrctuyuk9i8hzbxw73s9t6',
+       'Client-ID': '4apetz69vm7oun8rtshmpi5j4p61ci'
+     },
+
+	   success: function(info){
+
+			userFollows = info;
+
+      $("#Followers").html("<h1>Followers: " + userFollows.total + "</h1>");
     }
 	})
 }
@@ -88,7 +107,7 @@ function getLiveUserInformation(userId) {
 
       $.each(liveUserInfo.data, function(index, value){
         console.log(value.viewer_count);
-        $("#Viewers1").html("<h1>Viewers:</h1>" + value.viewer_count);
+        $("#Viewers1").html("<h1>Viewers: " + value.viewer_count + "</h1>");
       })
     }
 	})
@@ -108,26 +127,14 @@ function getUserFollows(userId) {
 
 			userFollows = info;
 
-      $("#Followers").html("<h1>Followers:</h1>" + userFollows.total);
+      $("#Followers").html("<h1>Followers: " + userFollows.total + "</h1>");
     }
 	})
 }
 
-function getUserSubscriptions(userId) {
-	$.ajax({
-	   type: "GET",
-	   dataType: "json",
-	   url: "https://api.twitch.tv/helix/users/subscriptions?user_id" + userId,
-     headers: {
-       'Authorization': 'k6gko4szxrctuyuk9i8hzbxw73s9t6',
-       'Client-ID': '4apetz69vm7oun8rtshmpi5j4p61ci'
-     },
-
-	   success: function(info){
-
-			userFollows = info;
-
-      $("#Followers").html("<h1>Followers:</h1>" + userFollows.total);
-    }
-	})
-}
+$(document).ready(function(){
+    $('#user_name1').keypress(function(e){
+      if(e.keyCode==13)
+      $('#getUserInfo1').click();
+    });
+});
