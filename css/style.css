@@ -10,6 +10,7 @@ body, #tabs {
 #tabs {
   background-color: #181818;
   color: white;
+  border: none;
 }
 
 #div1, #div2 {
@@ -33,4 +34,8 @@ h1 {
 
 #user_name1, #user_name2, #user_name3, #user_name4{
   width: 25%;
+}
+
+button{
+  color: white;
 }

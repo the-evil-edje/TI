@@ -69,7 +69,7 @@ function getUserId1(user)
         $("#headerTab-1").text(value.login);
 
        $("#channel1").attr("src","https://player.twitch.tv/?channel=" + value.login);
-       $("#chat1").attr("src","https://www.twitch.tv/embed/" + value.login + "/chat");
+       $("#chat1").attr("src","https://www.twitch.tv/embed/" + value.login + "/chat?darkpopout");
 
       getUserInformation1(value.id);
       getLiveUserInformation1(value.id)
@@ -198,7 +198,7 @@ function getUserId2(user)
         $("#headerTab-2").text(value.login);
 
        $("#channel2").attr("src","https://player.twitch.tv/?channel=" + value.login);
-       $("#chat2").attr("src","https://www.twitch.tv/embed/" + value.login + "/chat");
+       $("#chat2").attr("src","https://www.twitch.tv/embed/" + value.login + "/chat?darkpopout");
 
       getUserInformation2(value.id);
       getLiveUserInformation2(value.id)
@@ -324,7 +324,7 @@ function getUserId3(user)
         $("#headerTab-3").text(value.login);
 
        $("#channel3").attr("src","https://player.twitch.tv/?channel=" + value.login);
-       $("#chat3").attr("src","https://www.twitch.tv/embed/" + value.login + "/chat");
+       $("#chat3").attr("src","https://www.twitch.tv/embed/" + value.login + "/chat?darkpopout");
 
       getUserInformation3(value.id);
       getLiveUserInformation3(value.id)
@@ -451,7 +451,7 @@ function getUserId4(user)
         $("#headerTab-4").text(value.login);
 
        $("#channel4").attr("src","https://player.twitch.tv/?channel=" + value.login);
-       $("#chat4").attr("src","https://www.twitch.tv/embed/" + value.login + "/chat");
+       $("#chat4").attr("src","https://www.twitch.tv/embed/" + value.login + "/chat?darkpopout");
 
       getUserInformation4(value.id);
       getLiveUserInformation4(value.id)
